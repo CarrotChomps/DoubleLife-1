@@ -31,7 +31,7 @@ public class PairHealth implements Listener {
             Bukkit.getScheduler().runTaskLater(DoubleLife.plugin, () -> {
                 soulmateDiedWhileOffline.remove(playerWhoDied.getUniqueId());
             }, 5);
-            event.setDeathMessage(ChatColor.BOLD + playerWhoDied.getPlayerListName() + " was killed because their soulmate died while they were offline!");
+            event.setDeathMessage(ChatColor.BOLD + playerWhoDied.getPlayerListName() + " was killed because died while they were offline!");
             return;
         }
 
@@ -52,13 +52,7 @@ public class PairHealth implements Listener {
             if (soulmate != null)
                 justHadALifeRemoved.remove(soulmate.getUniqueId());
         }, 20);
-        int currentLivesAmount = SaveHandler.getPairLivesAmount(playerWhoDied);
-        SaveHandler.setPairLivesAmount(playerWhoDied, (currentLivesAmount - 1));
 
-        if (currentLivesAmount - 1 == 0 && DoubleLife.plugin.getConfig().getBoolean("misc.global-explosion-sound-on-final-death")){
-            for (Player player : Bukkit.getOnlinePlayers())
-                player.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 10, 1);
-        }
         SaveHandler.setPairHealth(playerWhoDied, 20.0);
     }
 

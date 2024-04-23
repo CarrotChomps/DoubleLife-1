@@ -1,0 +1,105 @@
+config-version: 2
+
+####### Gamerules #########################################################################################
+#### These settings will be applied when you run the '/dl setup' command!
+gamerules:
+  spectators-generate-chunks: false
+  announce-advancements: false
+  do-weather-cycle: false
+  do-insomnia: false
+  players-sleeping-percentage: 100
+  random-tick-speed: 6
+  spawn-radius: 0
+
+
+
+
+
+####### Items #########################################################################################
+#### You're able to ban specific items which also aren't allowed in the
+#### real series, like helmets.
+items:
+  ban-helmets: true
+  ban-god-apples: true
+
+  ## You may whitelist potions by adding their enum name to the list.
+  ## For help, refer to the wiki: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionType.html
+  potions:
+    whitelist-enabled: true
+    whitelist:
+      - WATER
+      - AWKWARD
+      - MUNDANE
+      - INVISIBILITY
+      - SPEED
+      - FIRE_RESISTANCE
+      - NIGHT_VISION
+
+
+
+
+
+####### Enchantments #########################################################################################
+#### In the real double life series, there's just one Enchantment Table.
+#### Players are also unable to craft bookshelves.
+#### You may change this here if you'd like.
+enchantments:
+  enchantment-table-craftable: false
+  enchantment-table-breakable: false
+  bookshelves-craftable: false
+
+  ## Enabling this setting will make all dropped Enchantment Tables unbreakable when dropped as an item.
+  ## E.x. it can't burn in lava or be blown up.
+  enchantment-table-indestructible-on-drop: true
+
+  ## Enabling this setting will result in all enchanted items being maxed out at level 2 when combined in an anvil.
+  nerf-enchantment-stacking: false
+
+
+
+
+
+####### Custom Recipes #########################################################################################
+#### Because the world's size is very limited, there are custom recipes to
+#### allow for easier access to resources like TNT, saddles and name tags.
+recipes:
+  craftable-spore-blossom: true
+  craftable-name-tag: true
+  craftable-saddle: true
+  paper-tnt: true
+
+
+
+
+
+####### Miscellaneous #########################################################################################
+#### A section for settings which don't fall under another category.
+misc:
+  ## Enabling this setting will reveal everyone's soulmate
+  ## upon running the '/dl randomizepairs' command.
+  reveal-soulmates: false
+
+  ## Enabling this setting will cause all players to have their spawnpoint
+  ## set to the location they get teleported to after running the
+  ## '/dl distributeplayers' command.
+  set-spawn-point-at-distributed-location: false
+
+  ## Enabling this setting will cause players to banned as soon as they
+  ## run out of lives. Useful for if you don't want spectators.
+  ban-players-upon-losing: false
+
+  ## When a player dies as a red name, a global explosion sound
+  ## will play when this setting is enabled. This means that
+  ## every player can hear it, no matter their location.
+  global-explosion-sound-on-final-death: true
+
+  ## If your soulmate dies while you're offline,
+  ## you will be killed by the plugin upon rejoining
+  ## when this setting is enabled.
+  kill-soulmate-on-join-if-offline-during-death: false
+
+  ## Will only be applied when running the '/dl setup' command!
+  border-size: 700.0
+
+  ## Kills all existing villagers and prevents new ones from spawning when enabled.
+  kill-villagers: false

@@ -102,11 +102,11 @@ public class TeamHandler implements Listener {
 
     @EventHandler
     public void updatePlayerTeamOnJoin(PlayerJoinEvent event) {
-        Player player = event.getPlayer();
-        int amountOfLives = SaveHandler.getPairLivesAmount(player);
-        if (amountOfLives == -1)
-            return;
-        modifyTeamAndGameMode(player, amountOfLives);
+//        Player player = event.getPlayer();
+//        int amountOfLives = SaveHandler.getPairLivesAmount(player);
+//        if (amountOfLives == -1)
+//            return;
+//        modifyTeamAndGameMode(player, amountOfLives);
     }
 
 }

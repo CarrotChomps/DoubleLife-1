@@ -9,7 +9,7 @@ import me.rowanscripts.doublelife.listeners.PairHealth;
 import me.rowanscripts.doublelife.listeners.ShareEffects;
 import me.rowanscripts.doublelife.scoreboard.TeamHandler;
 import me.rowanscripts.doublelife.util.commandArguments;
-import me.rowanscripts.doublelife.util.bStatsCode;
+// import me.rowanscripts.doublelife.util.bStatsCode;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -25,6 +25,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public final class DoubleLife extends JavaPlugin {
@@ -93,20 +94,20 @@ public final class DoubleLife extends JavaPlugin {
     public void onEnable() {
         plugin = this;
 
-        int pluginId = bStatsCode.get();
-        new Metrics(plugin, pluginId);
+        // int pluginId = bStatsCode.get();
+        // new Metrics(plugin, pluginId);
 
         ConfigHandler = new ConfigHandler();
         SaveHandler.construct();
 
-        plugin.getCommand("doublelife").setExecutor(new mainCommandExecutor());
-        plugin.getCommand("doublelife").setTabCompleter(new mainTabCompleter());
+        plugin.getCommand("serverpatch").setExecutor(new mainCommandExecutor());
+        plugin.getCommand("serverpatch").setTabCompleter(new mainTabCompleter());
 
-        Bukkit.getPluginManager().registerEvents(new TeamHandler(), plugin);
+        // Bukkit.getPluginManager().registerEvents(new TeamHandler(), plugin);
         Bukkit.getPluginManager().registerEvents(new PairHealth(), plugin);
         Bukkit.getPluginManager().registerEvents(new ShareEffects(), plugin);
         Bukkit.getPluginManager().registerEvents(new BlockBannedItems(), plugin);
-        Bukkit.getPluginManager().registerEvents(new ChatFormat(), plugin);
+        // Bukkit.getPluginManager().registerEvents(new ChatFormat(), plugin);
 
         BlockBannedItems.startKillVillagersLoop();
 
@@ -135,24 +136,14 @@ public final class DoubleLife extends JavaPlugin {
             if (args.length < 1)
                 return false;
 
-            if (args[0].equalsIgnoreCase("setup"))
-                return setup.onCommand(sender, command, label, args);
-            else if (args[0].equalsIgnoreCase("randomizepairs"))
+            else if (args[0].equalsIgnoreCase("restoreBackup")) // randomizepairs
                 return randomizePairs.onCommand(sender, command, label, args);
-            else if (args[0].equalsIgnoreCase("pair"))
+            else if (args[0].equalsIgnoreCase("clearPlayData")) // link pairs <player1> <player2>
                 return pair.onCommand(sender, command, label, args);
-            else if (args[0].equalsIgnoreCase("unpair"))
+            else if (args[0].equalsIgnoreCase("deleteFiles")) // un link pairs <player1>
                 return unpair.onCommand(sender, command, label, args);
-            else if (args[0].equalsIgnoreCase("setLives"))
-                return setLives.onCommand(sender, command, label, args);
-            else if (args[0].equalsIgnoreCase("distributeplayers"))
-                return distributePlayers.onCommand(sender, command, label, args);
-            else if (args[0].equalsIgnoreCase("help"))
-                return help.onCommand(sender, command, label, args);
-            else if (args[0].equalsIgnoreCase("reload"))
-                return reload.onCommand(sender, command, label, args);
-            else if (args[0].equalsIgnoreCase("config"))
-                return config.onCommand(sender, command, label, args);
+            else if (args[0].equalsIgnoreCase("restartWorld")) // list pairs
+                return listPairs.onCommand(sender, command, label, args);
 
             return false;
         }
@@ -164,18 +155,16 @@ public final class DoubleLife extends JavaPlugin {
         @Override
         public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
 
-            if ((label.equalsIgnoreCase("dl") || label.equalsIgnoreCase("doublelife")) && sender.hasPermission("doublelife.admin")){
+            if ((label.equalsIgnoreCase("serverpatch"))) {
                 if (args.length == 1)
                     return commandArguments.getAdministrativeCommands();
 
-                if (args[0].equalsIgnoreCase("pair"))
+                if (args[0].equalsIgnoreCase("clearPlayData"))
                     return pair.getAppropriateArguments(args);
-                else if (args[0].equalsIgnoreCase("unpair"))
+                else if (args[0].equalsIgnoreCase("deleteFiles"))
                     return unpair.getAppropriateArguments(args);
-                else if (args[0].equalsIgnoreCase("setLives"))
-                    return setLives.getAppropriateArguments(args);
-                else if (args[0].equalsIgnoreCase("config"))
-                    return config.getAppropriateArguments(args);
+                else if (args[0].equalsIgnoreCase("restartWorld"))
+                    return Collections.singletonList("");
             }
 
             return new ArrayList<>();

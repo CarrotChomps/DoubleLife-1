@@ -61,7 +61,7 @@ public class SaveHandler {
         savedPairs.add(finalStringToSave);
         saveYaml.set("soulmates", savedPairs);
 
-        TeamHandler.changePlayerTeamAccordingly(finalStringToSave, livesAmount);
+        // TeamHandler.changePlayerTeamAccordingly(finalStringToSave, livesAmount);
         save();
     }
 
@@ -73,7 +73,7 @@ public class SaveHandler {
         saveYaml.set("soulmates", savedPairs);
         save();
 
-        TeamHandler.changePlayerTeamAccordingly(pair, -1);
+        // TeamHandler.changePlayerTeamAccordingly(pair, -1);
     }
 
     public static String getPair(Player pairMember) {
@@ -150,7 +150,7 @@ public class SaveHandler {
         savedPairs.add(newPair);
         save();
 
-        TeamHandler.changePlayerTeamAccordingly(newPair, amount);
+        // TeamHandler.changePlayerTeamAccordingly(newPair, amount);
         return true;
     }
 
