@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c136da97-2ee1-4400-879f-53ade6cba811" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rowanscripts/doublelife/commands/listPairs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rowanscripts/doublelife/DoubleLife.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rowanscripts/doublelife/DoubleLife.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rowanscripts/doublelife/commands/help.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rowanscripts/doublelife/commands/help.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rowanscripts/doublelife/commands/randomizePairs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rowanscripts/doublelife/commands/randomizePairs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rowanscripts/doublelife/commands/setup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rowanscripts/doublelife/commands/setup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rowanscripts/doublelife/data/SaveHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rowanscripts/doublelife/data/SaveHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rowanscripts/doublelife/listeners/PairHealth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rowanscripts/doublelife/listeners/PairHealth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rowanscripts/doublelife/scoreboard/TeamHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rowanscripts/doublelife/scoreboard/TeamHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rowanscripts/doublelife/util/commandArguments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rowanscripts/doublelife/util/commandArguments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ServerPatch-1.3.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/ServerPatch-1.3.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-ServerPatch-1.3.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-ServerPatch-1.3.1.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +39,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Tyler Snowdon/Documents/GitHub/Temp Server/paper-1.20.1-196.jar",
+    "last_opened_file_path": "E:/Temp Server/fabric-server-mc.1.20.1-loader.0.15.3-launcher.1.0.0.jar",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -64,10 +58,10 @@
         <option name="region" />
         <option name="useCurrentConnection" value="false" />
       </extension>
-      <option name="JAR_PATH" value="$PROJECT_DIR$/../Temp Server/paper-1.20.1-196.jar" />
+      <option name="JAR_PATH" value="E:/Temp Server/fabric-server-mc.1.20.1-loader.0.15.3-launcher.1.0.0.jar" />
       <option name="VM_PARAMETERS" value="-DIReallyKnowWhatIAmDoingISwear" />
       <option name="PROGRAM_PARAMETERS" value="-nogui" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\Tyler Snowdon\Documents\GitHub\Temp Server" />
+      <option name="WORKING_DIRECTORY" value="E:\Temp Server" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
       <method v="2">

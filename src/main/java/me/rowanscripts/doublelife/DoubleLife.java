@@ -159,11 +159,11 @@ public final class DoubleLife extends JavaPlugin {
                 if (args.length == 1)
                     return commandArguments.getAdministrativeCommands();
 
-                if (args[0].equalsIgnoreCase("clearPlayData"))
+                if (args[0].equalsIgnoreCase("clearPlayData")) // pair
                     return pair.getAppropriateArguments(args);
-                else if (args[0].equalsIgnoreCase("deleteFiles"))
+                else if (args[0].equalsIgnoreCase("deleteFiles")) // unpair
                     return unpair.getAppropriateArguments(args);
-                else if (args[0].equalsIgnoreCase("restartWorld"))
+                else if (args[0].equalsIgnoreCase("restartWorld")) // list pairs
                     return Collections.singletonList("");
             }
 
